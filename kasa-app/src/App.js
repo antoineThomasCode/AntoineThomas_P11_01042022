@@ -4,16 +4,20 @@ import React from 'react'
 import Home from './pages/Home';
 import About from "./pages/About";
 import './App.scss';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import NotFound from "./pages/404";
 
 function App() {
   return (
       <div className="App">
+        <Header />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/About' element={<About />}/>
-          
+          <Route path='*' element={<NotFound />}/>
         </Routes>
-
+        <Footer />
       </div>
   );
 }
