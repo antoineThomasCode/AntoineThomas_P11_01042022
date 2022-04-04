@@ -617,4 +617,4 @@ const accomodations = [
 		]
 	}
 ]
-export default accomodations
+export default accomodations 

@@ -1,0 +1,14 @@
+.tags {
+    display: flex; 
+    column-gap: 20px;
+    padding-left: 0;
+    li {
+        list-style: none;
+        font-size: 0.8em;
+        background-color:  #FF6060;
+        padding: 5px 20px;
+        color: whitesmoke;
+        border-radius: 25px;
+
+    }
+}

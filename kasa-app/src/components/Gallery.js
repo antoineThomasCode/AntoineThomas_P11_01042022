@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./card";
-import accomodations from "../data/accomodation";
+import accomodations from "../data/accomodations";
 
 import '../scss/gallery.scss'
 function Gallery() {

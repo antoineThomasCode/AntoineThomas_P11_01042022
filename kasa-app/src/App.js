@@ -6,6 +6,7 @@ import About from "./pages/About";
 import './App.scss';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Accommodation from "./pages/Accommodation";
 import NotFound from "./pages/404";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/About' element={<About />}/>
+          <Route path='/Accommodation' element={<Accommodation />}/>
           <Route path='*' element={<NotFound />}/>
         </Routes>
         <Footer />

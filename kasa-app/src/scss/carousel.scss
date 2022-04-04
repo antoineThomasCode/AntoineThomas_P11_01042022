@@ -1,0 +1,12 @@
+.carousel {
+    height: 415px;
+    width: 400px;
+    border-radius: 25px;
+    .slide-selected > div > img {
+        height: 30px;
+        opacity: 0.2 ;
+    }
+    ul {
+        display: none;
+    }
+}
