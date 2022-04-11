@@ -3,8 +3,8 @@ import accomodations from "../data/accomodations";
 import Collapse from "../components/Collapse";
 import Tags from "../components/Tags";
 import Rating from "../components/Rating";
-
-import Slider from "../components/Carousel";
+import '../scss/accommodation.scss'
+import Carousel from "../components/Carousel";
 
 //get Id in Url 
 const getParam = (param) => new URL(document.location).searchParams.get(param);
@@ -12,7 +12,7 @@ const getParam = (param) => new URL(document.location).searchParams.get(param);
 function Accommodation() {
     const accommodationID = getParam('id')
     let currentAccommodation = []
-    accomodations.forEach((item) => {
+    accomodations.filter((item) => {
         if(item.id === accommodationID) {
             currentAccommodation = item
         }
@@ -24,7 +24,7 @@ function Accommodation() {
     
     return (
         <main>
-            <Slider pictures={currentAccommodation.pictures}/>
+            <Carousel pictures={currentAccommodation.pictures} title={currentAccommodation.title}></Carousel>
             
             <div className="info-accommodation-container">
                 <div className="host-profil">

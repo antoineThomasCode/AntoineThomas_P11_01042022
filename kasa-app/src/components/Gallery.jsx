@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./card";
+import Card from "./Card";
 import accomodations from "../data/accomodations";
 
 import '../scss/gallery.scss'

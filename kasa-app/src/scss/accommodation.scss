@@ -1,0 +1,67 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    > img {
+        height: 415px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 25px;
+        margin-bottom: 100px;
+    }
+    div:first-child {
+        height: 240px;
+        flex-basis: 100%;
+        
+    }
+    .info-accommodation-container{
+        display: flex; 
+        flex-wrap: wrap;
+        flex-basis:  100%;
+        justify-content: space-between;
+        
+        div:nth-child(2) {
+            flex-basis: 50%;
+            color: #FF6060;
+            
+            h2{
+                font-size: 2em; 
+                font-weight: 300;
+                margin-bottom: 0;
+            }
+            p {
+                margin-top: 0; 
+                font-size: 1.2em; 
+            }
+        }
+        .host-profil {
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            flex-basis: 20%;
+            order: 2; 
+            .rating {
+                flex-basis: 100%;
+                display: flex;
+                svg {
+                    height: 2em; 
+                    width: 2em;
+                }
+            }
+            h3 {
+                font-weight: 200;
+            }
+            >img {
+                border-radius: 50%;
+                height: 100px;
+                width: 100px; 
+            }
+        }
+    }
+    .collapse-container {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-between;
+
+    }
+}
+

@@ -9,7 +9,7 @@ function Collapse ({title, items}) {
             <button className="collapse-title" onClick={() => setIsOpen(!isOpen)}>{title}</button>
                 {isOpen && <div className="collapse-content">
                                 <ul>
-                                    {items.map((element) =>  <li key={element}>{element}</li>)}
+                                    {items.map((element) =>  <li key={items.indexOf(element)}>{element}</li>)}
                                 </ul>
                             </div>}
         </div>
