@@ -5,6 +5,7 @@ import Tags from "../components/Tags";
 import Rating from "../components/Rating";
 import '../scss/accommodation.scss'
 import Carousel from "../components/Carousel";
+import NotFound from "../components/404";
 
 
 //get Id in Url 
@@ -12,15 +13,18 @@ const getParam = (param) => new URL(document.location).searchParams.get(param);
 
 function Accommodation() {
     const accommodationID = getParam('id')
-    let currentAccommodation = []
-    accomodations.filter((item) => {
+    const filteredAccommodations = accomodations.filter((item) => {
         if(item.id === accommodationID) {
-            currentAccommodation = item
+           return item 
         } 
     })
+    
+    if (!filteredAccommodations.length) {
+        return <NotFound />
+    }
+    const currentAccommodation = filteredAccommodations[0]
     const descriptionTitle = 'Description'
     const equipmentTitle = 'Équipements'
-
     
     return (
         <main>

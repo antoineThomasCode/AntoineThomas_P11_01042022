@@ -72,3 +72,44 @@ footer{
     color: whitesmoke;
   }
 }
+@media screen and (max-width: 1240px){
+  .App {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 1000px){
+  .hero-banner h1 {
+    font-size: 1.6em !important;
+    text-align: start;
+    padding-right: 20px;
+  }
+  .gallery > a {
+    flex-basis: 45%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .App {
+    padding: 5px;
+  }
+  .hero-banner {
+    justify-content: flex-start;
+    height: 200px;
+  }
+  .App-header > a > img {
+    height: 40px;
+    position: relative;
+    bottom: 13px;
+  }
+  .App-header > nav > a {
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+  .gallery {
+    padding: 0;
+    background-color: #fff;
+    > a {
+      flex-basis: 100%;
+    }
+  }
+ 
+}
