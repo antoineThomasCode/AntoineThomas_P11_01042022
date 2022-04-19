@@ -1,16 +1,48 @@
 main {
     display: flex;
     flex-wrap: wrap;
-    > img {
-        height: 415px;
-        object-fit: cover;
-        width: 100%;
-        border-radius: 25px;
-        margin-bottom: 100px;
-    }
-    div:first-child {
-        height: 240px;
+    max-width: 1240px;
+    margin: 0 auto;
+    .carousel {
         flex-basis: 100%;
+        display: flex;
+        height: 415px;
+        position: relative;
+        .index-img-carousel{
+            position: absolute;
+            right: 50%;
+            bottom: 20px;
+            font-size: 2em;
+            color: white;
+        }
+        button {
+            position: absolute;
+            height: 100%;
+            width: 50px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            font-size: 3em;   
+            &:hover {
+                background-color: rgba(211, 211, 211, 0.27);
+            }
+        }
+        .next{
+            right: 20px;
+            
+        }
+        .prev{
+            left: 20px;
+        }
+        > img {
+            height: 415px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 25px;
+            margin-bottom: 100px;
+        }
         
     }
     .info-accommodation-container{
@@ -18,13 +50,14 @@ main {
         flex-wrap: wrap;
         flex-basis:  100%;
         justify-content: space-between;
-        
+        align-items: center;
         div:nth-child(2) {
             flex-basis: 50%;
             color: #FF6060;
+            font-size: 1.5em;
             
             h2{
-                font-size: 2em; 
+                font-size: 1.6em; 
                 font-weight: 300;
                 margin-bottom: 0;
             }
@@ -35,33 +68,41 @@ main {
         }
         .host-profil {
             display: flex;
-            justify-content: flex-end;
             flex-wrap: wrap;
-            flex-basis: 20%;
+            flex-basis: 30%;
             order: 2; 
+            justify-content: center;
+            margin-top: 100px;
             .rating {
                 flex-basis: 100%;
                 display: flex;
+                order: 3;
+                justify-content: space-between;
+                margin: 30px 0;
                 svg {
-                    height: 2em; 
-                    width: 2em;
+                    height: 3em; 
+                    width: 3em;
+                    
                 }
-            }
-            h3 {
-                font-weight: 200;
-            }
-            >img {
-                border-radius: 50%;
-                height: 100px;
-                width: 100px; 
-            }
+                }
+                h3 {
+                    display: flex;
+                    color: #FF6060;
+                    font-size: 1.6em;
+                    font-weight: 100;
+                    order: 1;
+                    justify-content: center;
+                    margin-right: 20px;
+                }
+                >img {
+                    order: 2;
+                    border-radius: 50%;
+                    height: 100px;
+                    width: 100px; 
+                }
         }
     }
-    .collapse-container {
-        display: flex;
-        flex-basis: 100%;
-        justify-content: space-between;
 
-    }
+   
 }
 

@@ -6,13 +6,14 @@ import '../scss/gallery.scss'
 function Gallery() {
     return (
         <main className="gallery">
-            {accomodations.map(({title, location, cover, id}) => (
+            {accomodations.map(({title, location, cover, id, index}) => (
                 
                 <Card
                     title={title}
                     location={location}
                     cover={cover}
                     id={id}
+                    key={id}
                 />
             ))}
         </main>

@@ -1,19 +1,16 @@
 import React, {useState} from "react";
-import '../scss/carousel.scss'
-
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 
 function Carousel({pictures, title}) {
     const [count, setCount] = useState(0);
-    console.log(pictures)
-    console.log(count)
     
     return (
         <div className="carousel">
             <img src={pictures[count]} alt={title} />
-            <button  onClick={() => setCount(count + 1)}>Next</button>
-            <button  onClick={() => setCount(count - 1)}>Prev</button>
-            <span className="index-img-carousel"></span>
+            <button className="next" onClick={() => setCount(count === pictures.length - 1 ? 0 : count + 1)}><FaChevronRight className="next-icon" /></button>
+            <button className="prev" onClick={() => setCount(count === 0 ?  pictures.length  - 1 : count - 1)}><FaChevronLeft className="prev-icon" /></button>
+            <span className="index-img-carousel">{count + 1}/{pictures.length}</span>
         </div>
     )
 }

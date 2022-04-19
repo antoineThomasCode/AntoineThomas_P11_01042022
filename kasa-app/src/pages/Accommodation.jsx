@@ -6,6 +6,7 @@ import Rating from "../components/Rating";
 import '../scss/accommodation.scss'
 import Carousel from "../components/Carousel";
 
+
 //get Id in Url 
 const getParam = (param) => new URL(document.location).searchParams.get(param);
 
@@ -15,12 +16,11 @@ function Accommodation() {
     accomodations.filter((item) => {
         if(item.id === accommodationID) {
             currentAccommodation = item
-        }
+        } 
     })
     const descriptionTitle = 'Description'
     const equipmentTitle = 'Équipements'
-    const description = [currentAccommodation.description]
-    const accommodationPictures = currentAccommodation.pictures
+
     
     return (
         <main>
@@ -28,7 +28,7 @@ function Accommodation() {
             
             <div className="info-accommodation-container">
                 <div className="host-profil">
-                    <img src={currentAccommodation.host.picture} />
+                    <img src={currentAccommodation.host.picture} alt={currentAccommodation.title} />
                     <h3>{currentAccommodation.host.name}</h3>
                     <Rating rating={currentAccommodation.rating} />
                 </div>
@@ -39,7 +39,7 @@ function Accommodation() {
                 </div>
             </div>
             <div className="collapse-container">
-                <Collapse title={descriptionTitle} items={description} />
+                <Collapse title={descriptionTitle} items={[currentAccommodation.description]} />
                 <Collapse title={equipmentTitle} items={currentAccommodation.equipments} />
             </div>
         </main>

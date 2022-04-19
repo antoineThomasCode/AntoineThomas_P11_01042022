@@ -1,0 +1,37 @@
+.collapse-container {
+    display: flex;
+    row-gap: 20px;
+    column-gap: 30px;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1240px;
+    margin: 0 auto;
+    flex-basis: 100%;
+    .collapse {
+        display: flex;
+        border-radius: 25px;
+        flex-wrap: wrap;
+        background-color: #F6F6F6;
+        border-radius: 10px;
+        flex-basis: 48%;
+        margin: 40px 0;
+        button {
+            cursor: pointer;
+            flex-basis: 100%;
+            font-size: 1.2em;
+            color: white;
+            font-weight: light;
+            padding: 10px;
+            border: none; 
+            border-radius: 10px; 
+            background-color: #FF6060;
+        }
+        ul {
+            padding: 20px;
+            li {
+                list-style: none;
+                color: #FF6060;
+            }
+        }
+    }
+}
