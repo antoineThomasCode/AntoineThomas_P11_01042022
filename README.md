@@ -2,7 +2,7 @@
 
 # This projet use React 
 
-## `$ git clone https://github.com/antoineThomasCode/AntoineThomas_P11_01042022.git`
+### `$ git clone https://github.com/antoineThomasCode/AntoineThomas_P11_01042022.git`
 
 Clone this repo 
 
@@ -11,7 +11,7 @@ Clone this repo
 Run this command to go in kasa-app directory
 
 
-### `npm install`
+### `$ npm install`
 
 install all dependencies 
 
