@@ -3,7 +3,9 @@ import React from 'react'
 
 import Home from './pages/Home';
 import About from "./pages/About";
-import './App.scss';
+
+import './scss/App.scss';
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Accommodation from "./pages/Accommodation";
@@ -15,8 +17,8 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/About' element={<About />}/>
-          <Route path='/Accommodation' element={<Accommodation />}/>
+          <Route path='/about' element={<About />}/>
+          <Route path='/accommodation' element={<Accommodation />}/>
           <Route path='*' element={<NotFound />}/>
         </Routes>
         <Footer />

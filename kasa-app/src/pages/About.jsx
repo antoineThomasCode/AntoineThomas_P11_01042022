@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse"
+
 import '../scss/tools.scss'
 import '../scss/collapse.scss'
 // content variables for collapses 
@@ -24,9 +25,7 @@ function About() {
                 <Collapse title={respectTitle} items={respectContent} />
                 <Collapse title={serviceTitle} items={serviceContent} />
                 <Collapse title={sercutiyTitle} items={sercutiyContent} />
-
             </div>
-           
         </div>
     )
 }

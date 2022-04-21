@@ -52,7 +52,7 @@ main {
         justify-content: space-between;
         align-items: center;
         div:nth-child(2) {
-            flex-basis: 50%;
+            flex-basis: 60%;
             color: #FF6060;
             font-size: 1.5em;
             
@@ -105,7 +105,7 @@ main {
 
    
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 990px) {
     .prev, .next {
         font-size: 1.4em !important;
     }
