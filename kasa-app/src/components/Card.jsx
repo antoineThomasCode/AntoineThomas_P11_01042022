@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 function Card ({title, location, id, cover}) {
     return (
-        
-            <Link to={`/Accommodation?id=${id}`}>
+            <Link to={`/accommodation?id=${id}`}>
                 <article className="card">
                     <div className="card-gradient"></div>
                     <img src={cover} alt={title} />

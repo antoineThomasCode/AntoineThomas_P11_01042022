@@ -13,23 +13,18 @@ const getParam = (param) => new URL(document.location).searchParams.get(param);
 
 function Accommodation() {
     const accommodationID = getParam('id')
-    const filteredAccommodations = accomodations.filter((item) => {
-        if(item.id === accommodationID) {
-           return item 
-        } 
-    })
+    //todo utiliser find vu qu'il y a qu'un élément, du coup plus besoin de prendre le premier élément du tableau
+    const currentAccommodation = accomodations.find((item) => item.id === accommodationID)
     
-    if (!filteredAccommodations.length) {
+    if (!currentAccommodation) {
         return <NotFound />
     }
-    const currentAccommodation = filteredAccommodations[0]
     const descriptionTitle = 'Description'
     const equipmentTitle = 'Équipements'
     
     return (
         <main>
             <Carousel pictures={currentAccommodation.pictures} title={currentAccommodation.title}></Carousel>
-            
             <div className="info-accommodation-container">
                 <div className="host-profil">
                     <img src={currentAccommodation.host.picture} alt={currentAccommodation.title} />
