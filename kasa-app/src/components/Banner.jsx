@@ -6,8 +6,8 @@ function Banner() {
     const page = new URL(document.location)
     return (
         <div className='hero-banner'>
-            {page.pathname === '/About' && <img src={bannerImgAbout} alt='image de bannière' className="logo" />}
-            {page.pathname === '/' && <img src={bannerImgUrl} alt='image de bannière' className="logo" />}
+            {page.pathname === '/about' && <img src={bannerImgAbout} alt='paysage de montagne' />}
+            {page.pathname === '/' && <img src={bannerImgUrl} alt='paysage bord de mere et falaises' />}
             {page.pathname === '/' && <h1>Chez vous, partout et ailleurs</h1>}
         </div>
     )
