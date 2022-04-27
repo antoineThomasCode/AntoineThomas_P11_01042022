@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import '../scss/collapse.scss'
 import { FaChevronLeft} from "react-icons/fa";
+import PropTypes from 'prop-types';
 
 function Collapse ({title, items}) {
     const [isOpen, setIsOpen] = useState(false)
@@ -15,5 +16,9 @@ function Collapse ({title, items}) {
                             </div>}
         </div>
     )
+}
+Collapse.propTypes = {
+    title: PropTypes.string.isRequired, 
+    items: PropTypes.array.isRequired
 }
 export default Collapse

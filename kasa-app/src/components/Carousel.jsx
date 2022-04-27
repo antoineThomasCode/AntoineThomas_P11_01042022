@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
+import PropTypes from 'prop-types';
 
 function Carousel({pictures, title}) {
     const [count, setCount] = useState(0);
@@ -14,6 +14,11 @@ function Carousel({pictures, title}) {
             <span className="index-img-carousel">{count + 1}/{pictures.length}</span>
         </div>
     )
+}
+
+Carousel.propTypes = {
+    pictures: PropTypes.array.isRequired,
+    title: PropTypes.string.isRequired
 }
 
 export default Carousel
